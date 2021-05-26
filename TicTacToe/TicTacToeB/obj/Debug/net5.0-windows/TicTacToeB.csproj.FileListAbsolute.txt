@@ -16,3 +16,21 @@ C:\Users\Neilson\source\repos\TicTacToeB\TicTacToeB\obj\Debug\net5.0-windows\Tic
 C:\Users\Neilson\source\repos\TicTacToeB\TicTacToeB\obj\Debug\net5.0-windows\ref\TicTacToeB.dll
 C:\Users\Neilson\source\repos\TicTacToeB\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.pdb
 C:\Users\Neilson\source\repos\TicTacToeB\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.genruntimeconfig.cache
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.exe
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.deps.json
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.runtimeconfig.json
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.runtimeconfig.dev.json
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.dll
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\ref\TicTacToeB.dll
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\bin\Debug\net5.0-windows\TicTacToeB.pdb
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.csprojAssemblyReference.cache
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.MainForm.resources
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.csproj.GenerateResource.cache
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.AssemblyInfoInputs.cache
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.AssemblyInfo.cs
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.csproj.CoreCompileInputs.cache
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.dll
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\ref\TicTacToeB.dll
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.pdb
+D:\My Files\GitHub\TicTacToe\TicTacToe\TicTacToeB\obj\Debug\net5.0-windows\TicTacToeB.genruntimeconfig.cache
