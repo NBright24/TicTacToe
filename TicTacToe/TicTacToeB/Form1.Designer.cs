@@ -306,10 +306,8 @@ namespace TicTacToeB
             this.Controls.Add(this.Tile3);
             this.Controls.Add(this.Tile2);
             this.Controls.Add(this.Tile1);
-            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicTacToe";

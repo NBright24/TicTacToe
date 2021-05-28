@@ -17,9 +17,9 @@ namespace TicTacToeB
             InitializeComponent();
         }
         //Setting variables
-        int turn = 1;
-        int click1 = 0, click2 = 0, click3 = 0, click4 = 0, click5 = 0, click6 = 0, click7 = 0, click8 = 0, click9 = 0;
-        int playerX = 0, playerO = 0;
+        ushort turn = 1;
+        ushort click1 = 0, click2 = 0, click3 = 0, click4 = 0, click5 = 0, click6 = 0, click7 = 0, click8 = 0, click9 = 0;
+        ushort playerX = 0, playerO = 0;
 
         //Button Functions is not in order and I don't know why they dont want to be in order.
         private void Tile4_Click(object sender, EventArgs e)
