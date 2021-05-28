@@ -49,6 +49,8 @@ namespace TicTacToeB
             this.TurnDisplay = new System.Windows.Forms.Label();
             this.DisplayXScore = new System.Windows.Forms.Label();
             this.DisplayOScore = new System.Windows.Forms.Label();
+            this.ResetBTN = new System.Windows.Forms.Button();
+            this.HelpBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Tile1
@@ -155,19 +157,20 @@ namespace TicTacToeB
             this.RestartBTN.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.RestartBTN.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RestartBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RestartBTN.Location = new System.Drawing.Point(93, 345);
+            this.RestartBTN.Location = new System.Drawing.Point(93, 344);
             this.RestartBTN.Name = "RestartBTN";
             this.RestartBTN.Size = new System.Drawing.Size(75, 34);
             this.RestartBTN.TabIndex = 9;
             this.RestartBTN.Text = " RESTART";
             this.RestartBTN.UseVisualStyleBackColor = false;
+            this.RestartBTN.Click += new System.EventHandler(this.RestartBTN_Click);
             // 
             // TurnLabel
             // 
             this.TurnLabel.AutoSize = true;
             this.TurnLabel.BackColor = System.Drawing.Color.Azure;
             this.TurnLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TurnLabel.Location = new System.Drawing.Point(37, 266);
+            this.TurnLabel.Location = new System.Drawing.Point(40, 266);
             this.TurnLabel.Name = "TurnLabel";
             this.TurnLabel.Size = new System.Drawing.Size(101, 21);
             this.TurnLabel.TabIndex = 10;
@@ -179,7 +182,7 @@ namespace TicTacToeB
             this.ScoreLabel.AutoSize = true;
             this.ScoreLabel.BackColor = System.Drawing.Color.Azure;
             this.ScoreLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ScoreLabel.Location = new System.Drawing.Point(72, 306);
+            this.ScoreLabel.Location = new System.Drawing.Point(69, 306);
             this.ScoreLabel.Name = "ScoreLabel";
             this.ScoreLabel.Size = new System.Drawing.Size(120, 21);
             this.ScoreLabel.TabIndex = 11;
@@ -190,7 +193,7 @@ namespace TicTacToeB
             this.OSccore.AutoSize = true;
             this.OSccore.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.OSccore.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OSccore.Location = new System.Drawing.Point(198, 317);
+            this.OSccore.Location = new System.Drawing.Point(195, 306);
             this.OSccore.Name = "OSccore";
             this.OSccore.Size = new System.Drawing.Size(26, 25);
             this.OSccore.TabIndex = 12;
@@ -201,7 +204,7 @@ namespace TicTacToeB
             this.XScore.AutoSize = true;
             this.XScore.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.XScore.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.XScore.Location = new System.Drawing.Point(37, 317);
+            this.XScore.Location = new System.Drawing.Point(40, 306);
             this.XScore.Name = "XScore";
             this.XScore.Size = new System.Drawing.Size(23, 25);
             this.XScore.TabIndex = 13;
@@ -222,22 +225,21 @@ namespace TicTacToeB
             this.TurnDisplay.AutoSize = true;
             this.TurnDisplay.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TurnDisplay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TurnDisplay.Location = new System.Drawing.Point(158, 266);
+            this.TurnDisplay.Location = new System.Drawing.Point(147, 266);
             this.TurnDisplay.Name = "TurnDisplay";
             this.TurnDisplay.Size = new System.Drawing.Size(66, 21);
             this.TurnDisplay.TabIndex = 15;
             this.TurnDisplay.Text = "Player X";
             this.TurnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TurnDisplay.Click += new System.EventHandler(this.TurnDisplay_Click);
             // 
             // DisplayXScore
             // 
             this.DisplayXScore.AutoSize = true;
             this.DisplayXScore.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DisplayXScore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DisplayXScore.Location = new System.Drawing.Point(12, 320);
+            this.DisplayXScore.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayXScore.Location = new System.Drawing.Point(12, 317);
             this.DisplayXScore.Name = "DisplayXScore";
-            this.DisplayXScore.Size = new System.Drawing.Size(19, 21);
+            this.DisplayXScore.Size = new System.Drawing.Size(22, 25);
             this.DisplayXScore.TabIndex = 16;
             this.DisplayXScore.Text = "0";
             // 
@@ -245,12 +247,37 @@ namespace TicTacToeB
             // 
             this.DisplayOScore.AutoSize = true;
             this.DisplayOScore.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DisplayOScore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DisplayOScore.Location = new System.Drawing.Point(230, 321);
+            this.DisplayOScore.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayOScore.Location = new System.Drawing.Point(227, 317);
             this.DisplayOScore.Name = "DisplayOScore";
-            this.DisplayOScore.Size = new System.Drawing.Size(19, 21);
+            this.DisplayOScore.Size = new System.Drawing.Size(22, 25);
             this.DisplayOScore.TabIndex = 17;
             this.DisplayOScore.Text = "0";
+            // 
+            // ResetBTN
+            // 
+            this.ResetBTN.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ResetBTN.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ResetBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ResetBTN.Location = new System.Drawing.Point(12, 344);
+            this.ResetBTN.Name = "ResetBTN";
+            this.ResetBTN.Size = new System.Drawing.Size(75, 34);
+            this.ResetBTN.TabIndex = 18;
+            this.ResetBTN.Text = "RESET";
+            this.ResetBTN.UseVisualStyleBackColor = false;
+            this.ResetBTN.Click += new System.EventHandler(this.ResetBTN_Click);
+            // 
+            // HelpBTN
+            // 
+            this.HelpBTN.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.HelpBTN.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HelpBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.HelpBTN.Location = new System.Drawing.Point(174, 344);
+            this.HelpBTN.Name = "HelpBTN";
+            this.HelpBTN.Size = new System.Drawing.Size(75, 34);
+            this.HelpBTN.TabIndex = 19;
+            this.HelpBTN.Text = "HELP";
+            this.HelpBTN.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -258,6 +285,8 @@ namespace TicTacToeB
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(261, 387);
+            this.Controls.Add(this.HelpBTN);
+            this.Controls.Add(this.ResetBTN);
             this.Controls.Add(this.DisplayOScore);
             this.Controls.Add(this.DisplayXScore);
             this.Controls.Add(this.TurnDisplay);
@@ -281,6 +310,7 @@ namespace TicTacToeB
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicTacToe";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
@@ -309,6 +339,8 @@ namespace TicTacToeB
         private System.Windows.Forms.Label TurnDisplay;
         private System.Windows.Forms.Label DisplayXScore;
         private System.Windows.Forms.Label DisplayOScore;
+        private System.Windows.Forms.Button ResetBTN;
+        private System.Windows.Forms.Button HelpBTN;
     }
 }
 

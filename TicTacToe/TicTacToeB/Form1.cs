@@ -16,9 +16,12 @@ namespace TicTacToeB
         {
             InitializeComponent();
         }
+        //Setting variables
         int turn = 1;
         int click1 = 0, click2 = 0, click3 = 0, click4 = 0, click5 = 0, click6 = 0, click7 = 0, click8 = 0, click9 = 0;
+        int playerX = 0, playerO = 0;
 
+        //Button Functions is not in order and I don't know why they dont want to be in order.
         private void Tile4_Click(object sender, EventArgs e)
         {
             if (click4 == 0)
@@ -139,6 +142,21 @@ namespace TicTacToeB
             checkit();
         }
 
+        //i dont know why they are here, but I cant move them, restart button
+        private void RestartBTN_Click(object sender, EventArgs e)
+        {
+            cleargame();
+        }
+        //This is for reseting the game, don't know why it is here
+        private void ResetBTN_Click(object sender, EventArgs e)
+        {
+            DisplayOScore.Text = "0";
+            DisplayXScore.Text = "0";
+            playerO = 0;
+            playerX = 0;
+            cleargame();
+        }
+
         private void Tile9_Click(object sender, EventArgs e)
         {
             if (click9 == 0)
@@ -239,13 +257,14 @@ namespace TicTacToeB
         {
 
         }
-        int player1 = 0, player2 = 0;
+        
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
 
+        //Display function to show 'Whose Turn?'
         public void display()
         {
             if (turn % 2 != 0)
@@ -257,9 +276,278 @@ namespace TicTacToeB
                 TurnDisplay.Text = "Player O";
             }
         }
+
+        //Check function to see who won
         public void checkit()
         {
+            if(Tile1.Text != "" && Tile2.Text != "" && Tile3.Text != "")
+            {
+                if(Tile1.Text == Tile2.Text && Tile1.Text == Tile3.Text)
+                {
+                    Tile1.BackColor = Color.Green;
+                    Tile1.ForeColor = Color.White;
+                    Tile2.BackColor = Color.Green;
+                    Tile2.ForeColor = Color.White;
+                    Tile3.BackColor = Color.Green;
+                    Tile3.ForeColor = Color.White;
+                    
+                    if(Tile1.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
 
+                }
+            }
+
+            if (Tile4.Text != "" && Tile5.Text != "" && Tile6.Text != "")
+            {
+                if (Tile4.Text == Tile5.Text && Tile4.Text == Tile6.Text)
+                {
+                    Tile4.BackColor = Color.Green;
+                    Tile4.ForeColor = Color.White;
+                    Tile5.BackColor = Color.Green;
+                    Tile5.ForeColor = Color.White;
+                    Tile6.BackColor = Color.Green;
+                    Tile6.ForeColor = Color.White;
+
+                    if (Tile4.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile7.Text != "" && Tile8.Text != "" && Tile9.Text != "")
+            {
+                if (Tile7.Text == Tile8.Text && Tile7.Text == Tile9.Text)
+                {
+                    Tile7.BackColor = Color.Green;
+                    Tile7.ForeColor = Color.White;
+                    Tile8.BackColor = Color.Green;
+                    Tile8.ForeColor = Color.White;
+                    Tile9.BackColor = Color.Green;
+                    Tile9.ForeColor = Color.White;
+
+                    if (Tile7.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile1.Text != "" && Tile4.Text != "" && Tile7.Text != "")
+            {
+                if (Tile1.Text == Tile4.Text && Tile1.Text == Tile7.Text)
+                {
+                    Tile1.BackColor = Color.Green;
+                    Tile1.ForeColor = Color.White;
+                    Tile4.BackColor = Color.Green;
+                    Tile4.ForeColor = Color.White;
+                    Tile7.BackColor = Color.Green;
+                    Tile7.ForeColor = Color.White;
+
+                    if (Tile1.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile2.Text != "" && Tile5.Text != "" && Tile8.Text != "")
+            {
+                if (Tile2.Text == Tile5.Text && Tile2.Text == Tile8.Text)
+                {
+                    Tile2.BackColor = Color.Green;
+                    Tile2.ForeColor = Color.White;
+                    Tile5.BackColor = Color.Green;
+                    Tile5.ForeColor = Color.White;
+                    Tile8.BackColor = Color.Green;
+                    Tile8.ForeColor = Color.White;
+
+                    if (Tile2.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile3.Text != "" && Tile6.Text != "" && Tile9.Text != "")
+            {
+                if (Tile3.Text == Tile6.Text && Tile3.Text == Tile9.Text)
+                {
+                    Tile9.BackColor = Color.Green;
+                    Tile9.ForeColor = Color.White;
+                    Tile6.BackColor = Color.Green;
+                    Tile6.ForeColor = Color.White;
+                    Tile3.BackColor = Color.Green;
+                    Tile3.ForeColor = Color.White;
+
+                    if (Tile3.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile1.Text != "" && Tile5.Text != "" && Tile9.Text != "")
+            {
+                if (Tile1.Text == Tile5.Text && Tile1.Text == Tile9.Text)
+                {
+                    Tile1.BackColor = Color.Green;
+                    Tile1.ForeColor = Color.White;
+                    Tile5.BackColor = Color.Green;
+                    Tile5.ForeColor = Color.White;
+                    Tile9.BackColor = Color.Green;
+                    Tile9.ForeColor = Color.White;
+
+                    if (Tile1.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
+
+            if (Tile7.Text != "" && Tile5.Text != "" && Tile3.Text != "")
+            {
+                if (Tile7.Text == Tile5.Text && Tile7.Text == Tile3.Text)
+                {
+                    Tile7.BackColor = Color.Green;
+                    Tile7.ForeColor = Color.White;
+                    Tile5.BackColor = Color.Green;
+                    Tile5.ForeColor = Color.White;
+                    Tile3.BackColor = Color.Green;
+                    Tile3.ForeColor = Color.White;
+
+                    if (Tile7.Text == "X")
+                    {
+                        MessageBox.Show("Player X Wins!");
+                        playerX++;
+                        DisplayXScore.Text = playerX.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Player O Wins!");
+                        playerO++;
+                        DisplayOScore.Text = playerO.ToString();
+                    }
+                    cleargame();
+
+                }
+            }
         }
+
+        //function to reset and such
+        public void cleargame()
+        {
+            TurnDisplay.Text = "Player X";
+            turn = 1;
+            click1 = 0; click2 = 0; click3 = 0; click4 = 0; click5 = 0; click6 = 0; click7 = 0; click8 = 0; click9 = 0;
+            Tile1.Text = "";
+            Tile2.Text = "";
+            Tile3.Text = "";
+            Tile4.Text = "";
+            Tile5.Text = "";
+            Tile6.Text = "";
+            Tile7.Text = "";
+            Tile8.Text = "";
+            Tile9.Text = "";
+            Tile1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile1.ForeColor = Color.Black;
+            Tile1.UseVisualStyleBackColor = false;
+            Tile2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile2.ForeColor = Color.Black;
+            Tile2.UseVisualStyleBackColor = false;
+            Tile3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile3.ForeColor = Color.Black;
+            Tile3.UseVisualStyleBackColor = false;
+            Tile4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile4.ForeColor = Color.Black;
+            Tile4.UseVisualStyleBackColor = false;
+            Tile5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile5.ForeColor = Color.Black;
+            Tile5.UseVisualStyleBackColor = false;
+            Tile6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile6.ForeColor = Color.Black;
+            Tile6.UseVisualStyleBackColor = false;
+            Tile7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile7.ForeColor = Color.Black;
+            Tile7.UseVisualStyleBackColor = false;
+            Tile8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile8.ForeColor = Color.Black;
+            Tile8.UseVisualStyleBackColor = false;
+            Tile9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            Tile9.ForeColor = Color.Black;
+            Tile9.UseVisualStyleBackColor = false;
+        }
+
     }
 }
