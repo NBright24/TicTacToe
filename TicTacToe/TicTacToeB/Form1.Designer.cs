@@ -278,6 +278,7 @@ namespace TicTacToeB
             this.HelpBTN.TabIndex = 19;
             this.HelpBTN.Text = "HELP";
             this.HelpBTN.UseVisualStyleBackColor = false;
+            this.HelpBTN.Click += new System.EventHandler(this.HelpBTN_Click);
             // 
             // MainForm
             // 

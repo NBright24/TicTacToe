@@ -157,6 +157,13 @@ namespace TicTacToeB
             cleargame();
         }
 
+        private void HelpBTN_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show
+                ("HOW TO PLAY?\n\nPlayer 1 automatically plays as Player X and is assigned with X.\n\nPlayer 2 gets to be Player O and is assigned with O.\n\n" +
+                "Players must know already the rules of playing classic TicTacToe.\n\nRESET: Resets everything including score.\nRESTART: Clears the board for players to play again.");
+        }
+
         private void Tile9_Click(object sender, EventArgs e)
         {
             if (click9 == 0)
