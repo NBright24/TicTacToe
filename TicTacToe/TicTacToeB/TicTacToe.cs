@@ -16,12 +16,11 @@ namespace TicTacToeB
         {
             InitializeComponent();
         }
-        //Setting variables
+
         ushort turn = 1;
         ushort click1 = 0, click2 = 0, click3 = 0, click4 = 0, click5 = 0, click6 = 0, click7 = 0, click8 = 0, click9 = 0;
         ushort playerX = 0, playerO = 0;
 
-        //Button Functions is not in order and I don't know why they dont want to be in order.
         private void Tile4_Click(object sender, EventArgs e)
         {
             if (click4 == 0)
@@ -142,12 +141,11 @@ namespace TicTacToeB
             checkit();
         }
 
-        //i dont know why they are here, but I cant move them, restart button
         private void RestartBTN_Click(object sender, EventArgs e)
         {
             cleargame();
         }
-        //This is for reseting the game, don't know why it is here
+
         private void ResetBTN_Click(object sender, EventArgs e)
         {
             DisplayOScore.Text = "0";
@@ -161,7 +159,7 @@ namespace TicTacToeB
         {
             MessageBox.Show
                 ("HOW TO PLAY?\n\nPlayer 1 automatically plays as Player X and is assigned with X.\n\nPlayer 2 gets to be Player O and is assigned with O.\n\n" +
-                "Players must know already the rules of playing classic TicTacToe.\n\nRESET: Resets everything including score.\nRESTART: Clears the board for players to play again.");
+                "Whichever icon matches 3 in a row vertically, horizontally, or diagonally wins.\n\nRESET: Resets everything including score.\nRESTART: Clears the board for players to play again.");
         }
 
         private void Tile9_Click(object sender, EventArgs e)
@@ -258,12 +256,6 @@ namespace TicTacToeB
             display();
             checkit();
         }
-
-
-        private void TurnDisplay_Click(object sender, EventArgs e)
-        {
-
-        }
         
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -271,7 +263,8 @@ namespace TicTacToeB
 
         }
 
-        //Display function to show 'Whose Turn?'
+
+
         public void display()
         {
             if (turn % 2 != 0)
@@ -284,7 +277,8 @@ namespace TicTacToeB
             }
         }
 
-        //Check function to see who won
+
+
         public void checkit()
         {
             if(Tile1.Text != "" && Tile2.Text != "" && Tile3.Text != "")
@@ -339,7 +333,6 @@ namespace TicTacToeB
                         DisplayOScore.Text = playerO.ToString();
                     }
                     cleargame();
-
                 }
             }
 
@@ -395,7 +388,6 @@ namespace TicTacToeB
                         DisplayOScore.Text = playerO.ToString();
                     }
                     cleargame();
-
                 }
             }
 
@@ -423,7 +415,6 @@ namespace TicTacToeB
                         DisplayOScore.Text = playerO.ToString();
                     }
                     cleargame();
-
                 }
             }
 
@@ -451,7 +442,6 @@ namespace TicTacToeB
                         DisplayOScore.Text = playerO.ToString();
                     }
                     cleargame();
-
                 }
             }
 
@@ -479,7 +469,6 @@ namespace TicTacToeB
                         DisplayOScore.Text = playerO.ToString();
                     }
                     cleargame();
-
                 }
             }
 
@@ -512,7 +501,8 @@ namespace TicTacToeB
             }
         }
 
-        //function to reset and such
+
+
         public void cleargame()
         {
             TurnDisplay.Text = "Player X";
